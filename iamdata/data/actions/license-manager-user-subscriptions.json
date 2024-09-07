@@ -1,0 +1,90 @@
+{
+  "associateuser": {
+    "name": "AssociateUser",
+    "description": "Grants permission to associate a subscribed user to an instance launched with license manager user subscriptions products",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deregisteridentityprovider": {
+    "name": "DeregisterIdentityProvider",
+    "description": "Grants permission to deregister Microsoft Active Directory with license-manager-user-subscriptions for a product",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "disassociateuser": {
+    "name": "DisassociateUser",
+    "description": "Grants permission to disassociate a subscribed user from an instance launched with license manager user subscriptions products",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listidentityproviders": {
+    "name": "ListIdentityProviders",
+    "description": "Grants permission to list all the identity providers on license manager user subscriptions",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listinstances": {
+    "name": "ListInstances",
+    "description": "Grants permission to list all the instances launched with license manager user subscription products",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listproductsubscriptions": {
+    "name": "ListProductSubscriptions",
+    "description": "Grants permission to lists all the product subscriptions for a product and identity provider",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listuserassociations": {
+    "name": "ListUserAssociations",
+    "description": "Grants permission to list all the users associated to an instance launched for a product",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "registeridentityprovider": {
+    "name": "RegisterIdentityProvider",
+    "description": "Grants permission to registers Microsoft Active Directory with license-manager-user-subscriptions for a product",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startproductsubscription": {
+    "name": "StartProductSubscription",
+    "description": "Grants permission to start product subscription for a user on a registered active directory for a product",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "stopproductsubscription": {
+    "name": "StopProductSubscription",
+    "description": "Grants permission to stop product subscription for a user on a registered active directory for a product",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateidentityprovidersettings": {
+    "name": "UpdateIdentityProviderSettings",
+    "description": "Grants permission to update the identity provider configuration",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}

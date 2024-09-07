@@ -1,0 +1,455 @@
+{
+  "creategroup": {
+    "name": "CreateGroup",
+    "description": "Grants permission to create a group in the specified IdentityStore",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "creategroupmembership": {
+    "name": "CreateGroupMembership",
+    "description": "Grants permission to create a member to a group in the specified IdentityStore",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "User",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createuser": {
+    "name": "CreateUser",
+    "description": "Grants permission to create a user in the specified IdentityStore",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletegroup": {
+    "name": "DeleteGroup",
+    "description": "Grants permission to delete a group in the specified IdentityStore",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletegroupmembership": {
+    "name": "DeleteGroupMembership",
+    "description": "Grants permission to remove a member that is part of a group in the specified IdentityStore",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "GroupMembership",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "User",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deleteuser": {
+    "name": "DeleteUser",
+    "description": "Grants permission to delete a user in the specified IdentityStore",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "User",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describegroup": {
+    "name": "DescribeGroup",
+    "description": "Grants permission to retrieve information about a group in the specified IdentityStore",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describegroupmembership": {
+    "name": "DescribeGroupMembership",
+    "description": "Grants permission to retrieve information about a member that is part of a group in the specified IdentityStore",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "GroupMembership",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "User",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "describeuser": {
+    "name": "DescribeUser",
+    "description": "Grants permission to retrieve information about user in the specified IdentityStore",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "User",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getgroupid": {
+    "name": "GetGroupId",
+    "description": "Grants permission to retrieve ID information about group in the specified IdentityStore",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getgroupmembershipid": {
+    "name": "GetGroupMembershipId",
+    "description": "Grants permission to retrieve ID information of a member which is part of a group in the specified IdentityStore",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "GroupMembership",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "User",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getuserid": {
+    "name": "GetUserId",
+    "description": "Grants permission to retrieves ID information about user in the specified IdentityStore",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "User",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "ismemberingroups": {
+    "name": "IsMemberInGroups",
+    "description": "Grants permission to check if a member is a part of groups in the specified IdentityStore",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "AllGroupMemberships",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "User",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listgroupmemberships": {
+    "name": "ListGroupMemberships",
+    "description": "Grants permission to retrieve all members that are part of a group in the specified IdentityStore",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "AllGroupMemberships",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listgroupmembershipsformember": {
+    "name": "ListGroupMembershipsForMember",
+    "description": "Grants permission to list groups of the target member in the specified IdentityStore",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "AllGroupMemberships",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "User",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listgroups": {
+    "name": "ListGroups",
+    "description": "Grants permission to search for groups within the specified IdentityStore",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "AllGroups",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listusers": {
+    "name": "ListUsers",
+    "description": "Grants permission to search for users in the specified IdentityStore",
+    "accessLevel": "List",
+    "resourceTypes": [
+      {
+        "name": "AllUsers",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updategroup": {
+    "name": "UpdateGroup",
+    "description": "Grants permission to update information about a group in the specified IdentityStore",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Group",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updateuser": {
+    "name": "UpdateUser",
+    "description": "Grants permission to update user information in the specified IdentityStore",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "Identitystore",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      },
+      {
+        "name": "User",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}

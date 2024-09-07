@@ -1,0 +1,29 @@
+{
+  "cancelconnection": {
+    "name": "CancelConnection",
+    "isPermissionOnly": true,
+    "description": "Grants permission to terminate a GUI Connect connection",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getconnection": {
+    "name": "GetConnection",
+    "isPermissionOnly": true,
+    "description": "Grants permission to get the metadata for a GUI Connect connection",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "startconnection": {
+    "name": "StartConnection",
+    "isPermissionOnly": true,
+    "description": "Grants permission to start a GUI Connect connection",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}

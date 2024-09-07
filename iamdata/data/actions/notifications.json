@@ -1,0 +1,255 @@
+{
+  "associatechannel": {
+    "name": "AssociateChannel",
+    "description": "Grants permission to associate a new Channel with a particular NotificationConfiguration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "NotificationConfiguration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createeventrule": {
+    "name": "CreateEventRule",
+    "description": "Grants permission to create a new EventRule, associating it with a NotificationConfiguration",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "createnotificationconfiguration": {
+    "name": "CreateNotificationConfiguration",
+    "description": "Grants permission to create a NotificationConfiguration",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [
+      "aws:TagKeys",
+      "aws:RequestTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "deleteeventrule": {
+    "name": "DeleteEventRule",
+    "description": "Grants permission to delete an EventRule",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "EventRule",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deletenotificationconfiguration": {
+    "name": "DeleteNotificationConfiguration",
+    "description": "Grants permission to delete a NotificationConfiguration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "NotificationConfiguration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "deregisternotificationhub": {
+    "name": "DeregisterNotificationHub",
+    "description": "Grants permission to deregister a NotificationHub",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "disassociatechannel": {
+    "name": "DisassociateChannel",
+    "description": "Grants permission to remove a Channel from a NotificationConfiguration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "NotificationConfiguration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "geteventrule": {
+    "name": "GetEventRule",
+    "description": "Grants permission to get an EventRule",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "EventRule",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getnotificationconfiguration": {
+    "name": "GetNotificationConfiguration",
+    "description": "Grants permission to get a NotificationConfiguration",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "NotificationConfiguration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "getnotificationevent": {
+    "name": "GetNotificationEvent",
+    "description": "Grants permission to get a NotificationEvent",
+    "accessLevel": "Read",
+    "resourceTypes": [
+      {
+        "name": "NotificationEvent",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listchannels": {
+    "name": "ListChannels",
+    "description": "Grants permission to list Channels by NotificationConfiguration",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listeventrules": {
+    "name": "ListEventRules",
+    "description": "Grants permission to list EventRules",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listnotificationconfigurations": {
+    "name": "ListNotificationConfigurations",
+    "description": "Grants permission to list NotificationConfigurations",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listnotificationevents": {
+    "name": "ListNotificationEvents",
+    "description": "Grants permission to list NotificationEvents",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listnotificationhubs": {
+    "name": "ListNotificationHubs",
+    "description": "Grants permission to list NotificationHubs",
+    "accessLevel": "List",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "listtagsforresource": {
+    "name": "ListTagsForResource",
+    "description": "Grants permission to get tags for a resource",
+    "accessLevel": "Read",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "registernotificationhub": {
+    "name": "RegisterNotificationHub",
+    "description": "Grants permission to register a NotificationHub",
+    "accessLevel": "Write",
+    "resourceTypes": [],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "tagresource": {
+    "name": "TagResource",
+    "description": "Grants permission to tag a resource",
+    "accessLevel": "Tagging",
+    "resourceTypes": [
+      {
+        "name": "NotificationConfiguration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:TagKeys",
+      "aws:RequestTag/${TagKey}"
+    ],
+    "dependentActions": []
+  },
+  "untagresource": {
+    "name": "UntagResource",
+    "description": "Grants permission to remove tags from a resource",
+    "accessLevel": "Tagging",
+    "resourceTypes": [
+      {
+        "name": "NotificationConfiguration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [
+      "aws:TagKeys"
+    ],
+    "dependentActions": []
+  },
+  "updateeventrule": {
+    "name": "UpdateEventRule",
+    "description": "Grants permission to update an EventRule",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "EventRule",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  },
+  "updatenotificationconfiguration": {
+    "name": "UpdateNotificationConfiguration",
+    "description": "Grants permission to update a NotificationConfiguration",
+    "accessLevel": "Write",
+    "resourceTypes": [
+      {
+        "name": "NotificationConfiguration",
+        "required": true,
+        "conditionKeys": [],
+        "dependentActions": []
+      }
+    ],
+    "conditionKeys": [],
+    "dependentActions": []
+  }
+}
