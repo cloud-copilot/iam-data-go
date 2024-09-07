@@ -6,6 +6,30 @@ Contains IAM data for AWS actions, resources, and conditions based on IAM policy
 ## Data Updates
 Data is scanned daily and a new version is published if there are changes. The version number is updated to reflect the date of the last update and the function `UpdatedAt()` returns the date of the last data update. This process is managed outside this repo.
 
+## Usage
+
+```go
+package main
+
+import (
+  "fmt"
+  "github.com/cloud-copilot/iam-data-go/iamdata"
+)
+
+func main() {
+  serviceKeys, _ := iamdata.ServiceKeys()
+  for _, serviceKey := range serviceKeys {
+    serviceName, _ := iamdata.ServiceName(serviceKey)
+    fmt.Println("Getting Actions for", serviceName)
+    actions, _ := iamdata.ActionsForService(serviceKey)
+    for _, action := range actions {
+      actionDetails, _ := iamdata.ActionDetails(serviceKey, action)
+      fmt.Println(actionDetails)
+    }
+  }
+}
+```
+
 ## API
 ### Services
 * `ServiceKeys()` - Returns a slice of all service keys such as 's3', 'ec2', etc.
