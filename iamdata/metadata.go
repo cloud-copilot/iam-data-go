@@ -1,8 +1,8 @@
 package iamdata
 
 import (
-    "fmt"
-    "time"
+	"fmt"
+	"time"
 )
 
 // Metadata available for the module.
@@ -13,11 +13,11 @@ type Metadata struct {
 
 // metadata returns the metadata for the module.
 func metadata() (Metadata, error) {
-		data, err := readJSONData[Metadata]([]string{"metadata"})
-		if err != nil {
-			return Metadata{}, err
-		}
-		return data, nil
+	data, err := readJSONData[Metadata]([]string{"metadata"})
+	if err != nil {
+		return Metadata{}, err
+	}
+	return data, nil
 }
 
 // UpdatedAt returns the time the IAM data was last updated.

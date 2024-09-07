@@ -8,9 +8,9 @@ import (
 
 // ConditionKeyType maps to the condition key metadata available.
 type ConditionKeyType struct {
-	Key         string  `json:"key"`
-	Description string  `json:"description"`
-	Type        string  `json:"type"`
+	Key         string `json:"key"`
+	Description string `json:"description"`
+	Type        string `json:"type"`
 }
 
 // ConditionKeysMap is a map of condition key names to ConditionKeyType metadata.

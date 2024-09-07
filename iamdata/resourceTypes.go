@@ -8,9 +8,9 @@ import (
 
 // ResourceType maps to the resource type metadata available.
 type ResourceType struct {
-	Key           string    `json:"key"`
-	Arn           string    `json:"arn"`
-	ConditionKeys []string  `json:"conditionKeys"`
+	Key           string   `json:"key"`
+	Arn           string   `json:"arn"`
+	ConditionKeys []string `json:"conditionKeys"`
 }
 
 // ResourceTypesMap is a map of resource type names to ResourceType metadata.

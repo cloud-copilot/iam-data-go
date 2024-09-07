@@ -3,10 +3,10 @@ package iamdata
 import (
 	"embed"
 	"encoding/json"
-	"io/fs"
 	"fmt"
-	"strings"
+	"io/fs"
 	"path/filepath"
+	"strings"
 )
 
 //go:embed data/*.json data/**/*.json
@@ -19,7 +19,7 @@ func readJSONData[T any](filePath []string) (T, error) {
 	filePath = append([]string{"data"}, filePath...)
 	// Add the .json extension to the last element of the file path
 	lastIndex := len(filePath) - 1
-  filePath[lastIndex] = filePath[lastIndex] + ".json"
+	filePath[lastIndex] = filePath[lastIndex] + ".json"
 
 	//Read the JSON file
 	fullPath := filepath.Join(filePath...)

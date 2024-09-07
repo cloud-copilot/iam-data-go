@@ -1,21 +1,22 @@
 package iamdata
 
 import (
-	"strings"
 	"errors"
 	"fmt"
+	"strings"
 )
 
 // ActionResourceType maps to the resource type metadata that can be included in an action.
 type ActionResourceType struct {
-	Name             string    `json:"name"`
-	Required         bool      `json:"required"`
-	ConditionKeys    []string  `json:"conditionKeys"`
-	DependentActions []string  `json:"dependentActions"`
+	Name             string   `json:"name"`
+	Required         bool     `json:"required"`
+	ConditionKeys    []string `json:"conditionKeys"`
+	DependentActions []string `json:"dependentActions"`
 }
 
 // AccessLevel is a custom type to restrict the values to specific strings
 type AccessLevel string
+
 const (
 	Read    AccessLevel = "Read"
 	Write   AccessLevel = "Write"
@@ -45,7 +46,7 @@ func ActionsForService(serviceKey string) ([]string, error) {
 
 	var names []string
 	for _, action := range data {
-			names = append(names, action.Name)
+		names = append(names, action.Name)
 	}
 	return names, nil
 }
