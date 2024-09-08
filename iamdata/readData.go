@@ -7,10 +7,19 @@ import (
 	"io/fs"
 	"path/filepath"
 	"strings"
+	"sync"
 )
 
 //go:embed data/*.json data/**/*.json
 var dataFiles embed.FS
+
+// Define a cache using a map and a mutex for safe concurrent access
+var cache = struct {
+	sync.RWMutex
+	data map[string]interface{}
+}{
+	data: make(map[string]interface{}),
+}
 
 // readJSONData reads a JSON file from the data folder and unmarshals it into a variable.
 func readJSONData[T any](filePath []string) (T, error) {
@@ -23,7 +32,14 @@ func readJSONData[T any](filePath []string) (T, error) {
 
 	//Read the JSON file
 	fullPath := filepath.Join(filePath...)
-	// jsonData, err := fs.ReadFile(dataFiles, "data/" + filePath)
+
+	cache.RLock()
+	if data, found := cache.data[fullPath]; found {
+		cache.RUnlock()
+		return data.(T), nil
+	}
+	cache.RUnlock()
+
 	jsonData, err := fs.ReadFile(dataFiles, fullPath)
 	if err != nil {
 		return *new(T), fmt.Errorf("error reading file: %w", err)
@@ -35,6 +51,10 @@ func readJSONData[T any](filePath []string) (T, error) {
 	if err != nil {
 		return *new(T), fmt.Errorf("error unmarshaling JSON: %w", err)
 	}
+
+	cache.Lock()
+	cache.data[fullPath] = data
+	cache.Unlock()
 
 	return data, nil
 }
